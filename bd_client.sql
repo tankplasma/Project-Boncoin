@@ -33,7 +33,8 @@ CREATE TABLE `bd_client` (
   `age_client` int(2) NOT NULL,
   `nickname_client` varchar(15) NOT NULL,
   `password_client` varchar(30) NOT NULL,
-  `email_client` varchar(50) NOT NULL
+  `email_client` varchar(50) NOT NULL,
+  `nick_tes_mort` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 COMMIT;
 
