@@ -20,7 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
-  <?php $pdo = new PDO("mysql:host=localhost;dbname=bdd_projet","root","",array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION)); ?>
+  <?php $pdo = new PDO("mysql:host=localhost;dbname=client","root","",array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION)); ?>
 
 </head>
 
@@ -99,24 +99,6 @@
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
         <h2 class="mb-5">Experience</h2>
-
-
-        <?php for ($i = 1; $i <= 5; $i++) {
-            $experiences = $pdo->query ("SELECT * FROM `tab_xp` ORDER BY `tab_xp`.`ID_xp`ASC ");
-            while ($experience = $experiences->fetch(PDO::FETCH_OBJ)) {
-                if ($experience->ID_xp =="$i") {?>
-                  <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                      <h3 class="mb-0"><?php echo $experience->nom_emplois;  ?></h3>
-                      <div class="subheading mb-3"><?php echo $experience->nom_entreprise;  ?></div>
-                      <p><?php echo $experience->description; ?></p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                      <span class="text-primary"><?php echo $experience->periode_mois; ?></span>
-                    </div>
-                  </div>
-          <?php }}} ?>
-      </div>
 
     </section>
 
