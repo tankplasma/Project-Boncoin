@@ -1,2 +1,0 @@
-# Project-Boncoin
-Nicolas, Adrien
